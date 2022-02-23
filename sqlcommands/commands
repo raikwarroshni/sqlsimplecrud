@@ -1,31 +1,34 @@
 sql commands
 
-#. for create database -
+# for create database -
    create database demo(database_name);
 
-#. for change database-
+# for change database-
    use demo;
 
-#. for show databases
+# for show databases
    show databases;
 
-#. for show tables;
+# for show tables;
    show tables;
 
-#. for show columns-
+# drop table-
+  drop table course(tableName);
+
+# for show columns-
    show columns from student;
 
-#. for insert data-
+# for insert data-
    insert into students(sno,name,class,address,city) values(1,'rose','1st','nanda nagae','indore'); 
 
-#. create tables-
+# create tables-
    create table student(sno int,
    name varchar(10),
    class varchar(10),
    address varchar(10)
    );
 
-#. delete row-
+# delete row-
    delete from student where="rose";
 
 #  update row-
@@ -37,8 +40,24 @@ sql commands
 #  limit-
    select name from student limit 4;
 
-#  alter table-
-   alter table student add free int;
+#  alter table(add column)-
+   alter table student add studentfree int;
+
+# modifiy column-
+  alter table student modify column studentfree varchar(20);
+
+# alter table(drop column)-
+  alter table student drop column city;     
+
+# constrains------
+  1. not null
+  2. unique
+  3. primary key
+     create table biodata(sno int , courseName varchar(30), course_free varchar(40), primary key(sno));
+  4. foreign key 
+     
+  5. check 
+     create table biodata(sno int , courseName varchar(30), course_free varchar(40), check (age<=18));
 
    
 
