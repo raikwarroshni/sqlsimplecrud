@@ -1,0 +1,48 @@
+sql commands
+
+#. for create database -
+   create database demo(database_name);
+
+#. for change database-
+   use demo;
+
+#. for show databases
+   show databases;
+
+#. for show tables;
+   show tables;
+
+#. for show columns-
+   show columns from student;
+
+#. for insert data-
+   insert into students(sno,name,class,address,city) values(1,'rose','1st','nanda nagae','indore'); 
+
+#. create tables-
+   create table student(sno int,
+   name varchar(10),
+   class varchar(10),
+   address varchar(10)
+   );
+
+#. delete row-
+   delete from student where="rose";
+
+#  update row-
+   update student set name='roshni' , city='ujjain' where sno='1';
+
+#  read table-    
+   select * from student;
+
+#  limit-
+   select name from student limit 4;
+
+#  alter table-
+   alter table student add free int;
+
+   
+
+
+
+
+
