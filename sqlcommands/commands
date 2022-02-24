@@ -51,18 +51,27 @@ sql commands
 
 # constrains------
   1. not null
+     create table course(sno int not null, courseName varchar(30), course_free varchar(40));
   2. unique
+     create table course(sno int , courseName varchar(30), course_free varchar(40), uniques(sno));
+
   3. primary key
-     create table biodata(sno int , courseName varchar(30), course_free varchar(40), primary key(sno));
+     create table student(sno int , courseName varchar(30), course_free varchar(40), primary key(sno));
   4. foreign key 
      
   5. check 
-     create table biodata(sno int , courseName varchar(30), course_free varchar(40), check (age<=18));
+     create table student(sno int , courseName varchar(30), course_free varchar(40), check (age<=18));
 
-   
-  5. check 
-     create table biodata(sno int , courseName varchar(30), course_free varchar(40), check (age<=18));
+  6. add foreign key
+     alter table course add foreign key(studentId) references student(sno);
 
+  7. inner joins-
+     SELECT course.courseName, course.courseType,student.name
+     FROM (course INNER JOIN student ON student.sno = course.studentId);   
+
+  8 left join-
+    SELECT course.courseName, course.courseType, student.name FROM course
+    LEFT JOIN student ON course.studentId = student.sno;  
 
 
 
