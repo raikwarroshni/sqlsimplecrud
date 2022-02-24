@@ -60,7 +60,8 @@ sql commands
      create table biodata(sno int , courseName varchar(30), course_free varchar(40), check (age<=18));
 
    
-
+  5. check 
+     create table biodata(sno int , courseName varchar(30), course_free varchar(40), check (age<=18));
 
 
 
